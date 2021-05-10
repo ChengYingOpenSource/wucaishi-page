@@ -1,0 +1,42 @@
+@import '~src/styles/variable.less';
+
+.testbox {
+  display: flex;
+  height: calc(~'100vh - 300px');
+  .left {
+    width: 40%;
+  }
+  .center {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    .testBtn {
+      width: 68px;
+      height: 68px;
+      background: #2D41EF;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+  .right {
+    flex: 1;
+  }
+}
+.result {
+  display: flex;
+  justify-content: center;
+  color: rgba(0,0,0,0.65);
+  line-height: 30px;
+  .desc {
+    width: 626px;
+    background: #F2F4F6;
+    border-radius: 2px;
+    border-radius: 2px;
+    padding: 24px;
+  }
+}

@@ -1,0 +1,165 @@
+@import '~src/styles/variable.less';
+
+.title {
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+  justify-content: space-between;
+}
+.create {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 460px;
+
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .step1Form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .formBox {
+      :global {
+        .ant-form-item-label {
+          width: 6em;
+        }
+      }
+    }
+
+    .list {
+      flex: 1;
+      overflow: auto;
+      padding-right: 5px;
+    }
+  }
+
+  .bar {
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F4F5F8 100%);
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    border-radius: 4px;
+    line-height: 50px;
+    padding: 0 18px;
+    cursor: pointer;
+
+    &._active {
+      border: 2px solid #2D41EF;
+      color: #2D41EF;
+    }
+    &:hover {
+      color: #2D41EF;
+    }
+  }
+
+  :global {
+    .ant-card-bordered {
+      border: 1px solid #ccc;
+    }
+    .ant-spin-nested-loading, .ant-spin-container {
+      height: 100%;
+    }
+  }
+
+  .treeTable {
+    :global {
+      .ant-table.ant-table-middle .ant-table-tbody>tr>td {
+        padding: 5px 0px;
+      }
+      .ant-table-tbody>tr>td {
+        border-bottom: none;
+      }
+    }
+  }
+  .prevBtn {
+    padding: 0 34px;
+    border-radius: 4px 0px 0px 4px;
+  }
+  .nextBtn {
+    padding: 0 34px;
+    border-radius: 0px 4px 4px 0px;
+  }
+  .saveBtn {
+    padding: 0 34px;
+    margin-right: 16px;
+  }
+  .radio {
+    :global {
+      .ant-radio-button-wrapper {
+        padding: 0 22px;
+      }
+    }
+  }
+  .testbox {
+    display: flex;
+    height: 100%;
+    .left {
+      width: 50%;
+      ._top {
+        height: 60%;
+        padding-bottom: 10px;
+      }
+      ._bottom {
+        height: 40%;
+        padding-top: 10px;
+      }
+    }
+    .center {
+      display: flex;
+      align-items: center;
+      padding: 14px;
+      .testBtn {
+        width: 68px;
+        height: 68px;
+        background: #2D41EF;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .right {
+      flex: 1;
+    }
+  }
+  .result {
+    display: flex;
+    justify-content: center;
+    color: rgba(0,0,0,0.65);
+    line-height: 30px;
+    .desc {
+      width: 626px;
+      background: #F2F4F6;
+      border-radius: 2px;
+      border-radius: 2px;
+      padding: 24px;
+    }
+  }
+
+}
+
+.funcard {
+  height: 100%;
+  overflow: auto;
+
+  :global {
+    .ant-form-item-label {
+      width: 6em;
+    }
+  }
+}
+
+.formLabel {
+  :global {
+    .ant-form-item-label {
+      width: 7em;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.publish {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 460px;
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+  }
+}
+.formLabel {
+  :global {
+    .ant-form-item-label {
+      width: 7em;
+    }
+  }
+}
