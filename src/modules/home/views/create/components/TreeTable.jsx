@@ -13,7 +13,7 @@ const initValue = {
   field: '',
   required: 0,
 };
-const isAddType = ['COLLECTION', 'ARRAY', 'OBJECT'];
+const isAddType = ['COLLECTION', 'ARRAY', 'OBJECT', 'ITEM'];
 @inject('store', 'global')
 @observer
 
@@ -43,7 +43,7 @@ export default class TreeTable extends React.Component {
         return msg.push('参数名不能为空');
       }
       if (this.hasRename(arr, it.field)) {
-        return msg.push(it.field + '参数名不能重复');
+        return msg.push(`${it.field}参数名不能重复`);
       }
       if (it.fields && it.fields.length > 0) {
         this.isValues(it.fields, msg);
@@ -67,7 +67,7 @@ export default class TreeTable extends React.Component {
 
   handleAdd = () => {
     const { values } = this.state;
-    this.setValues([...values, { ...initValue }]);
+    this.setValues([...(values || []), { ...initValue }]);
   }
 
   onChangeValue = (key, type, val) => {
